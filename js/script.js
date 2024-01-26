@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
-    var nomeArmazenado = localStorage.getItem("nomeUsuario");
+    let nomeArmazenado = localStorage.getItem("nomeUsuario");
   
     if (nomeArmazenado) {
-      var criarNovoUsuario = confirm("Você deseja criar um novo usuário?");
+      let criarNovoUsuario = confirm("Você deseja criar um novo usuário?");
   
       if (criarNovoUsuario) {
         localStorage.removeItem("nomeUsuario");
@@ -16,8 +16,8 @@ document.addEventListener("DOMContentLoaded", function() {
   });
   
   function obterNomeUsuario() {
-    var nomeUsuario = prompt("Digite seu nome:");
-  
+    let nomeUsuario = prompt("Digite seu nome:");
+    obterPronomeUsuario();
     while (!nomeUsuario.trim()) {
       alert("Nome de usuário não pode estar vazio.");
       nomeUsuario = prompt("Por favor, digite um nome válido:");
@@ -25,10 +25,26 @@ document.addEventListener("DOMContentLoaded", function() {
   
     localStorage.setItem("nomeUsuario", nomeUsuario);
   
-    exibirNomeUsuario(nomeUsuario);
+    exibirNomeUsuario(nomeUsuario, pronome);
+  }
+
+  const obterPronomeUsuario = () => {
+    let p = prompt("digite seu pronome\nEla\nEle");
+    let pronome;
+    if (p == 'ela'){
+      pronome = "a";
+    }else if(p == "ele"){
+      pronome = "o";
+    }else if (p == null && p != "ele", "ela" )
+    {
+    p = prompt("digite seu pronome\nEla\nEle");
+    }
+    return pronome;
   }
   
-  function exibirNomeUsuario(nome) {
-    var nomeUsuarioTag = document.getElementById("nomeUsuario");
-    nomeUsuarioTag.textContent = "Bem-vindo, " + nome + "!";
+  function exibirNomeUsuario(nome,m) {
+    let nomeUsuarioTag = document.getElementById("nomeUsuario");
+    nomeUsuarioTag.textContent = "Bem-vind" + m + " " + nome;
   }
+
+  

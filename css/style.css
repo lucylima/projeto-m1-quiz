@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Moirai+One&display=swap');
 :root {
     --dark-mode: #1b2430;
     --blue: #5fbdff;
@@ -13,6 +14,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Inter', sans-serif;
+    font-weight: 600;
     transition: 0.5s;
 }
 .dark-mode {
@@ -25,19 +27,24 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 0.6rem;
+    padding: 0.5rem 0.8rem;
     background-color: var(--dark-mode);
+    color: white;
 }
 .usuario {
     display: flex;
     align-items: center;
     gap: 1rem; 
     background-color: grey;
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
     border-radius: 30px;
+    font-size: 0.9rem;
 }
 .usuario img{
-
     border-radius: 100%;
-
+    width: 2.8rem;
+}
+#logo {
+    font-family: "Moirai One";
+    font-size: 2rem;
 }

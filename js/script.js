@@ -29,6 +29,6 @@ document.addEventListener("DOMContentLoaded", function() {
   function exibirNomeUsuario(nome) {
     let nomeUsuarioTag = document.getElementById("nomeUsuario");
     nomeUsuarioTag.textContent = "Bem-vinda" + " " + nome;
-  }
+      }
 
   

@@ -1,34 +1,25 @@
-document.addEventListener("DOMContentLoaded", function() {
-    let nomeArmazenado = localStorage.getItem("nomeUsuario");
-  
-    if (nomeArmazenado) {
-  let criarNovoUsuario = confirm("Você deseja criar um novo usuário?");
-  if (criarNovoUsuario) {
-    localStorage.removeItem("nomeUsuario");
-        obterNomeUsuario();
-      } else {
-        exibirNomeUsuario(nomeArmazenado);
-      }
-    } else {
-       obterNomeUsuario();
-    }
-  });
-  
-  function obterNomeUsuario() {
-    let nomeUsuario = prompt("Digite seu nome:");
-    while (!nomeUsuario.trim()) {
-      alert("Nome de usuário não pode estar vazio.");
-      nomeUsuario = prompt("Por favor, digite um nome válido:");
-    }
-  
-    localStorage.setItem("nomeUsuario", nomeUsuario);
-  
-    exibirNomeUsuario(nomeUsuario, 'e');
+function solicitarPronome() {
+  let pronome = prompt("Por favor, digite seu pronome (ele/ela):");
+
+  if (pronome === null) {
+      location.reload();
+      return;
   }
 
-  function exibirNomeUsuario(nome) {
-    let nomeUsuarioTag = document.getElementById("nomeUsuario");
-    nomeUsuarioTag.textContent = "Bem-vinda" + " " + nome;
-      }
+  pronome = pronome.toLowerCase();
+  let nome = prompt("Agora, digite seu nome:");
 
-  
+  if (pronome === 'ele') {
+      exibirNomeUsuario('bem-vindo', nome);
+  } else if (pronome === 'ela') {
+      exibirNomeUsuario('bem-vinda', nome);
+  } else {
+      alert("Pronome inválido. Por favor, use 'ele' ou 'ela'.");
+  }
+}
+
+function exibirNomeUsuario(saudacao, nome) {
+  let nomeUsuarioTag = document.getElementById("nomeUsuario");
+  nomeUsuarioTag.textContent = `${saudacao.charAt(0).toUpperCase() + saudacao.slice(1)}, ${nome}!`;
+}
+solicitarPronome();

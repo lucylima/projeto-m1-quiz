@@ -15,9 +15,9 @@ function solicitarPronome() {
       exibirNomeUsuario('bem-vinda', nome);
   } else {
       alert("Pronome inválido. Por favor, use 'ele' ou 'ela'.");
-      location.reload();
-  }
-}
+    }
+    location.reload();
+} 
 
 function exibirNomeUsuario(saudacao, nome) {
   let nomeUsuarioTag = document.getElementById("nomeUsuario");

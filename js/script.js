@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 function solicitarPronome() {
   let pronome = prompt("Por favor, digite seu pronome (ele/ela):");
 
@@ -27,4 +25,3 @@ function exibirNomeUsuario(saudacao, nome) {
 }
 
 solicitarPronome();
->>>>>>> cdb2c0bea903602d37f0f5dde30528611974812d

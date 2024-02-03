@@ -106,12 +106,6 @@ function exibirNomeUsuario(saudacao, nome) {
 
 solicitarPronome();
 
-const alertar = () => {
-  alert('bom dia');
-}
-let botao = document.getElementById('botao');
-botao.addEventListener('click', () => {
-  alert('oi');
-});
+
 
 

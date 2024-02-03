@@ -9,13 +9,26 @@ divPergunta.addEventListener('click', checarResposta);
 const questionsData = [ // ! adicionar nossas perguntas
     // * questionsData é um array
   { // *as questoes sao objetos
-    // *  id: 1
+    id: 1,
     questionImage: '/caminho/sabe',
     question: "Qual é a capital do Brasil?", // * objeto da pergunta que é uma string
     options: ["Brasília", "Rio de Janeiro", "São Paulo"], // * array 
     correctAnswer: "Brasília"
   },
   {
+    id: 2,
+    question: "Qual é o maior planeta do nosso sistema solar?",
+    options: ["Terra", "Júpiter", "Marte"],
+    correctAnswer: "Júpiter"
+  },
+  {
+    id: 3,
+    question: "Qual é o maior planeta do nosso sistema solar?",
+    options: ["Terra", "Júpiter", "Marte"],
+    correctAnswer: "Júpiter"
+  },
+  {
+    id: 4,
     question: "Qual é o maior planeta do nosso sistema solar?",
     options: ["Terra", "Júpiter", "Marte"],
     correctAnswer: "Júpiter"

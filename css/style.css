@@ -8,3 +8,24 @@ body {
     margin: 0;
     padding: 0;
 }
+
+button {
+    width: 20%;
+    text-align: center;
+    padding: 5px;
+    border: none; 
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #008CCC;
+    color: white;
+  }
+  
+  .final{
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .final .botao-jogar-novamente button {
+    text-align: center;
+  }

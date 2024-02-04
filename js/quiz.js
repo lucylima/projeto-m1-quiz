@@ -1,14 +1,27 @@
 let score = 0; // inicializa com 0
 let fase = 0; // começa na fase 1
+let questaoElemento = document.getElementById('texto-questao');
+let alternativasElemento = document.querySelectorAll('.alternativa');
+let imagemElemento = document.getElementById('imagem-questao');
+let jogarNovamente = document.querySelector(".botao-jogar-novamente");
+let questaoAtual = document.getElementById('n-questao');
 
-import { questoes } from "bancoPerguntas";
+import questoes from "./bancoPerguntas.js";
+
+questaoElemento.textContent = questoes[0].questao;
+questaoAtual.textContent = `Questão ${fase + 1}/${questoes.length}`;
 
 function mostrarPerguntas() { // ! atenção na renderização 
+
   
   document.querySelectorAll(".alternativa").forEach((item) => {
     item.addEventListener("click", proximaPergunta);
   });
 };
+
+function proximaPergunta() {
+  questaoElemento.textContent = 'bom dia';
+}
 
 function validar() { // ! validação da resposta
 
@@ -16,7 +29,6 @@ function validar() { // ! validação da resposta
 
 function calcularPontuacao(score) { // * feito
   // const aleatorioNumero = Math.floor(Math.random() * 100) + 1; 
-
   score++;
   
 }
@@ -24,8 +36,17 @@ function calcularPontuacao(score) { // * feito
 function mostrarResultado(score) { 
   // TODO: mostrar resultado apenas no final depois da última fase
   const numeroAcertos = document.getElementById('resultado');
-  numeroAcertos.innerHTML = `Você acertou ${score} de ${bancoPerguntas.length} perguntas.`;
+  numeroAcertos.innerHTML = `Você acertou ${score} de ${questoes.length} perguntas.`;
 }
+
+jogarNovamente.onclick = () => {
+  content.style.display = "flex";
+  contentFinish.style.display = "none";
+
+  questaoAtual = 0;
+  questaoCerta = 0;
+  mostrarPerguntas();
+};
 
 // function solicitarPronome() {
 //   let pronome = prompt("Por favor, digite seu pronome (ele/ela):");

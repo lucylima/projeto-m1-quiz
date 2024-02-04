@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Quiz JavaScript</title>
 </head>
 <body>
@@ -13,25 +14,31 @@
                  <span id="n-questao">Pergunta 0/0</span>
             </div>
             <div id="container-questao">
-                <p id="texto-questao">QUESTAO</p>
+                <img src="" alt="" id="imagem-questao">
+                <p id="texto-questao"></p>
             </div>
             <div class="respostas">
                 <label id="r1" class="alternativa">
-                    <input type="radio" name="" id="">
+                    <input type="radio" id="">
+                    <span id="alternativa1"></span>
                 </label>
                 <label id="r2" class="alternativa">
-                    <input type="radio" name="" id="">
+                    <input type="radio" id="">
                 </label>
                 <label id="r3" class="alternativa">
-                    <input type="radio" name="" id="">
+                    <input type="radio" id="">
                 </label>
                 <label id="r4" class="alternativa">
-                    <input type="radio" name="" id="">
+                    <input type="radio" id="">
                 </label>
             </div>
-            <button id="enviarResposta">Proximo</button>
         </div>
+        <div>
+            <span></span>
+            <button class="final botao-jogar-novamente">Jogar Novamente</button>
+          </div>
     </main>
-    <script src="../js/quiz.js"></script>
+
+    <script src="../js/quiz.js" type="module"></script>
 </body>
 </html>

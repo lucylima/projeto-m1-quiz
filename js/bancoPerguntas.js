@@ -1,4 +1,4 @@
-export default [ 
+export default [     
     // ! adicionar nossas perguntas
     // * bancoPerguntas é um array
     // * as questoes sao objetos

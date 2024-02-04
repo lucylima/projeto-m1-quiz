@@ -6,8 +6,32 @@
     <title>Quiz JavaScript</title>
 </head>
 <body>
-    <h2 id="pergunta"></h2>
-    <button id="submit-button">enviar</button>
+    <main id="container">
+        <nav></nav>
+        <div class="container-quiz">
+            <div>
+                 <span id="n-questao">Pergunta 0/0</span>
+            </div>
+            <div id="container-questao">
+                <p id="texto-questao">QUESTAO</p>
+            </div>
+            <div class="respostas">
+                <label id="r1" class="alternativa">
+                    <input type="radio" name="" id="">
+                </label>
+                <label id="r2" class="alternativa">
+                    <input type="radio" name="" id="">
+                </label>
+                <label id="r3" class="alternativa">
+                    <input type="radio" name="" id="">
+                </label>
+                <label id="r4" class="alternativa">
+                    <input type="radio" name="" id="">
+                </label>
+            </div>
+            <button id="enviarResposta">Proximo</button>
+        </div>
+    </main>
     <script src="../js/quiz.js"></script>
 </body>
 </html>

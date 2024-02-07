@@ -8,14 +8,27 @@ let questaoAtual = document.getElementById('n-questao');
 
 import questoes from "./bancoPerguntas.js";
 
-questaoElemento.textContent = questoes[0].questao;
-questaoAtual.textContent = `Questão ${fase + 1}/${questoes.length}`;
+// questaoElemento.textContent = questoes[0].questao;
 
 function mostrarPerguntas() { // ! atenção na renderização 
+  questaoAtual.textContent = `Questão ${fase + 1}/${questoes.length}`;
+  const item = questoes[fase];
+  answers.innerHTML = "";
+  questao.innerHTML = item.questao;
+  item.answers.forEach((answer) => {
+    const div = document.createElement("div");
 
-  
-  document.querySelectorAll(".alternativa").forEach((item) => {
-    item.addEventListener("click", proximaPergunta);
+    div.innerHTML = `
+    <button class="answer" data-correct="${answer.correct}">
+      ${answer.option}
+    </button>
+    `;
+
+    answers.appendChild(div);
+  });
+
+  document.querySelectorAll(".answer").forEach((item) => {
+    item.addEventListener("click", nextQuestion);
   });
 };
 
@@ -47,6 +60,8 @@ jogarNovamente.onclick = () => {
   questaoCerta = 0;
   mostrarPerguntas();
 };
+
+mostrarPerguntas();
 
 // function solicitarPronome() {
 //   let pronome = prompt("Por favor, digite seu pronome (ele/ela):");

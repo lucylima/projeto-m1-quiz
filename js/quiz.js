@@ -1,5 +1,5 @@
-let score = 0; // inicializa com 0
-let fase = 0; // começa na fase 1
+let score = 0;
+let fase = 0;
 let questaoElemento = document.getElementById('texto-questao');
 let alternativasElemento = document.querySelectorAll('.alternativa');
 let imagemElemento = document.getElementById('imagem-questao');
@@ -62,31 +62,6 @@ jogarNovamente.onclick = () => {
 };
 
 mostrarPerguntas();
-
-// function solicitarPronome() {
-//   let pronome = prompt("Por favor, digite seu pronome (ele/ela):");
-//   if (pronome === null) {
-//       solicitarPronome();
-//       return;
-//   }
-
-//   pronome = pronome.toLowerCase();
-//   let nome = prompt("Agora, digite seu nome:");
-
-//   if (pronome === 'ele') {
-//       exibirNomeUsuario('bem-vindo', nome);
-//   } else if (pronome === 'ela') {
-//       exibirNomeUsuario('bem-vinda', nome);
-//   } else {
-//       alert("Pronome inválido. Por favor, use 'ele' ou 'ela'.");
-//       solicitarPronome();
-//   }
-// }
-// function exibirNomeUsuario(saudacao, nome) {
-//   let nomeUsuarioTag = document.getElementById("nomeUsuario");
-//   nomeUsuarioTag.textContent = `${saudacao.charAt(0).toUpperCase() + saudacao.slice(1)}, ${nome}!`;
-// }
-// solicitarPronome();
 
 
 

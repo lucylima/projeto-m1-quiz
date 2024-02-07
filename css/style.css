@@ -29,3 +29,7 @@ button {
   .final .botao-jogar-novamente button {
     text-align: center;
   }
+
+  img{
+    width: 300px;
+  }

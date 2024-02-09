@@ -15,12 +15,13 @@ function mostrarPerguntas() {
     questaoAtual.textContent = `Questão ${fase + 1}/${questoes.length}`;
     const item = questoes[fase];
     questaoElemento.textContent = item.questao;
-    imagemElemento.src = item.imagem;
+    imagemElemento.style.backgroundImage = `url(${item.imagem})`;
     alternativasElemento.forEach((element, index) => {
         element.children[0].id = `resposta${index + 1}`;
         element.children[1].textContent = item.alternativas[index].alternativa;
     });
     submitRespostaBtn.disabled = false;
+    jogarNovamente.classList.add('none');
 }
 
 function validarResposta(resposta) {
@@ -58,6 +59,7 @@ submitRespostaBtn.addEventListener('click', () => {
     } else {
         alert("Selecione uma resposta antes de enviar."); 
     }
+    respostaSelecionada.checked = false;
 });
 
 mostrarPerguntas();

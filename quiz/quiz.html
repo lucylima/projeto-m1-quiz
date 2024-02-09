@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/quiz/quiz-javascript.css">
     <title>Quiz JavaScript</title>
 </head>
 <body>
@@ -13,9 +13,11 @@
             <div>
                  <span id="n-questao">Pergunta 0/0</span>
             </div>
-            <div id="container-questao">
-                <img src="" alt="" id="imagem-questao">
+            <div id="container-questao"> 
+                <div id="imagem-questao">
                 <p id="texto-questao"></p>
+                </div>
+
                 <div class="respostas">
                     <label class="alternativa">
                         <input type="radio" name="resposta">
@@ -37,7 +39,7 @@
                 <button id="submit-resposta">Submit</button>
             </div>
         </div>
-        <div>
+        <div class="container-resultado">
             <span id="resultado"></span>
             <button class="final botao-jogar-novamente">Jogar Novamente</button>
         </div>

@@ -25,7 +25,7 @@ body {
     box-shadow: 0px 0px 15px black;
     border-radius: 5px;
     height: 100%;
-    padding: 1rem;
+    padding: 1.2rem;
 }
 
 #container-questao {
@@ -35,13 +35,17 @@ body {
 }
 
 #imagem-questao {
-    height: 13rem;
+    height: 12rem;
     width: 25rem;
     display: flex;
     align-items: center;
     justify-content: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: black;
+    margin-bottom: 1.2rem;
+    margin-top: 0.5rem;
+    border-radius: 20px;
     #texto-questao {
         color: white;
         font-size: 1.5rem;
@@ -53,3 +57,31 @@ body {
 .none {
     display: none;
 }
+.respostas{
+    display:flex; 
+    flex-direction: column;
+    gap: 0.9rem;
+    width: 100%;
+}
+.alternativa{
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 0px 5px grey;
+    padding: 0.7rem;
+    width: 100%;
+    gap: 1rem;
+    font-weight: 500;
+    border-radius: 14px;
+}
+#n-questao{
+    font-weight: 700;
+}
+.selecionado{
+    background-color: rgb(63, 210, 63);
+    color: white;
+    
+}
+.selecionado input[type="radio"]:checked{
+    accent-color: black;
+}
+#submit-resposta

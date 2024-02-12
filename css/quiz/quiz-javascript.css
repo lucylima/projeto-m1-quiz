@@ -43,8 +43,8 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-color: black;
-    margin-bottom: 1.2rem;
-    margin-top: 0.5rem;
+    margin-bottom: 1.8rem;
+    margin-top: 1rem;
     border-radius: 20px;
     #texto-questao {
         color: white;
@@ -60,18 +60,18 @@ body {
 .respostas{
     display:flex; 
     flex-direction: column;
-    gap: 0.9rem;
+    gap: 1.4rem;
     width: 100%;
 }
 .alternativa{
     display: flex;
     align-items: center;
     box-shadow: 0px 0px 5px grey;
-    padding: 0.7rem;
+    padding: 0.9rem 0.7rem;
     width: 100%;
     gap: 1rem;
     font-weight: 500;
-    border-radius: 14px;
+    border-radius: 12px;
 }
 #n-questao{
     font-weight: 700;
@@ -84,4 +84,16 @@ body {
 .selecionado input[type="radio"]:checked{
     accent-color: black;
 }
-#submit-resposta
+#submit-resposta {
+    background-color: rgb(24, 27, 27);
+    color: white;
+    padding: 0.7rem 2rem;
+    margin-top: 1.2rem;
+    border-radius: 12px;
+    width: 70%;
+    outline: none;
+}
+.alternativa:hover {
+    background-color: rgb(238, 238, 238);
+    cursor: pointer;
+}

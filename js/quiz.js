@@ -10,7 +10,7 @@ let contentFinish = document.querySelector('.respostas');
 let submitRespostaBtn = document.getElementById('submit-resposta');
 
 import questoes from "./bancoPerguntas.js";
-
+ 
 function mostrarPerguntas() {
     questaoAtual.textContent = `Questão ${fase + 1}/${questoes.length}`;
     const item = questoes[fase];
@@ -26,15 +26,18 @@ function mostrarPerguntas() {
 
 function validarResposta(resposta) {
     let respostaCorreta = questoes[fase].alternativas.find(alternativa => alternativa.certo === true).alternativa;
-    if (resposta === respostaCorreta) {
+    if (resposta === respostaCorreta){
         score++;
-    }
-    if (fase < questoes.length - 1) {
-        fase++;
-        mostrarPerguntas();
-    } else {
-        mostrarResultado(score);
-    }
+        if (fase < questoes.length - 1) {
+            fase++;
+            mostrarPerguntas();
+        } else {
+            mostrarResultado(score);
+        }
+        } else {
+            fase = 0;
+            mostrarPerguntas();
+        }
 }
 
 function mostrarResultado(score) {
@@ -53,6 +56,7 @@ jogarNovamente.onclick = () => {
 };
 
 submitRespostaBtn.addEventListener('click', () => {
+    console.log('funcionando');
     let respostaSelecionada = document.querySelector('input[name="resposta"]:checked');
     if (respostaSelecionada) {
         validarResposta(respostaSelecionada.nextElementSibling.textContent);

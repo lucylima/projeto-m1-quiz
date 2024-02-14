@@ -4,22 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/quiz/quiz-javascript.css">
+    <link rel="stylesheet" href="../css/quiz/midia.css">
     <title>Quiz JavaScript</title>
 </head>
 <body>
     <main id="container">
-        <nav></nav>
         <div class="container-quiz">
             <div>
                  <span id="n-questao">Pergunta 0/0</span>
+                 <span id="nome"></span>
             </div>
             <div id="container-questao"> 
                 <div id="imagem-questao">
                 <p id="texto-questao"></p>
-               </div>
-
+            </div>
                 <div class="respostas">
-                    <label class="alternativa selecionado">
+                    <label class="alternativa">
                         <input type="radio" name="resposta">
                         <span id="texto-alternativa"></span>
                     </label>
@@ -36,7 +36,7 @@
                         <span id="texto-alternativa"></span>
                     </label>
                 </div>
-                <button id="submit-resposta">Submit</button>
+                <button id="submit-resposta">Próximo</button>
             </div>
         </div>
         <div class="container-resultado">

@@ -84,4 +84,10 @@ body {
 .selecionado input[type="radio"]:checked{
     accent-color: black;
 }
-#submit-resposta
+#submit-resposta{
+    padding: 0.6rem 1.9rem;
+    margin-top: 1.7rem;
+    outline:none;
+
+
+}

@@ -1,10 +1,12 @@
 function solicitarInformacao() {
   let pronome = prompt("Por favor, digite seu pronome (ele/ela):");
   pronome = pronome.toLowerCase();
-  
+
   let nome = prompt("Agora, digite seu nome:");
   if(nome == ''){while(nome == ''){ nome = prompt("Por favor!, digite seu nome");}}
- 
+
+  localStorage.setItem('pronome', pronome);
+  localStorage.setItem('nome', nome);
   switch(pronome){
     case 'ele':
       exibirNomeUsuario('Bem-vindo', nome);

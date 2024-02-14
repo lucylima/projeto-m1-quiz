@@ -1,18 +1,22 @@
 function solicitarInformacao() {
   let pronome = prompt("Por favor, digite seu pronome (ele/ela):");
   pronome = pronome.toLowerCase();
+  
   let nome = prompt("Agora, digite seu nome:");
-    switch(pronome){
-      case 'ele':
-        exibirNomeUsuario('Bem-vindo', nome);
+  if(nome == ''){while(nome == ''){ nome = prompt("Por favor!, digite seu nome");}}
+ 
+  switch(pronome){
+    case 'ele':
+      exibirNomeUsuario('Bem-vindo', nome);
+    break;
+
+    case 'ela':
+      exibirNomeUsuario('Bem-vinda', nome);
       break;
 
-      case 'ela':
-        exibirNomeUsuario('Bem-vinda', nome);
-        break;
-      default:
-        exibirNomeUsuario('Olá', nome);
-    }
+    default:
+      exibirNomeUsuario('Olá', nome);
+  }
 } 
 
 function exibirNomeUsuario(saudacao, nome) {

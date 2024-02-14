@@ -1,22 +1,18 @@
-function solicitarPronome() {
+function solicitarInformacao() {
   let pronome = prompt("Por favor, digite seu pronome (ele/ela):");
-
-  if (pronome === null) {
-      location.reload();
-      return;
-  }
-
   pronome = pronome.toLowerCase();
   let nome = prompt("Agora, digite seu nome:");
+    switch(pronome){
+      case 'ele':
+        exibirNomeUsuario('Bem-vindo', nome);
+      break;
 
-  if (pronome === 'ele') {
-      exibirNomeUsuario('bem-vindo', nome);
-  } else if (pronome === 'ela') {
-      exibirNomeUsuario('bem-vinda', nome);
-  } else {
-      alert("Pronome inválido. Por favor, use 'ele' ou 'ela'.");
+      case 'ela':
+        exibirNomeUsuario('Bem-vinda', nome);
+        break;
+      default:
+        exibirNomeUsuario('Olá', nome);
     }
-    location.reload();
 } 
 
 function exibirNomeUsuario(saudacao, nome) {
@@ -24,4 +20,4 @@ function exibirNomeUsuario(saudacao, nome) {
   nomeUsuarioTag.textContent = `${saudacao.charAt(0).toUpperCase() + saudacao.slice(1)}, ${nome}!`;
 }
 
-solicitarPronome();
+solicitarInformacao();

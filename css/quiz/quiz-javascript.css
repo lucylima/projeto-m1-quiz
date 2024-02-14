@@ -82,8 +82,9 @@ body {
     font-weight: 700;
 }
 
-.selecionado input[type="radio"]:checked{
+label + :checked{
     accent-color: rgb(23, 201, 23);
+    background-color: black;
 }
 
 #submit-resposta {

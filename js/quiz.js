@@ -10,7 +10,7 @@ let contentFinish = document.querySelector('.respostas');
 let submitRespostaBtn = document.getElementById('submit-resposta');
 
 import questoes from "./bancoPerguntas.js";
-
+ 
 function mostrarPerguntas() {
     questaoAtual.textContent = `Questão ${fase + 1}/${questoes.length}`;
     const item = questoes[fase];

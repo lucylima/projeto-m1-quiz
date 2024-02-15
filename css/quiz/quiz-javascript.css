@@ -81,6 +81,15 @@ body {
 #n-questao{
     font-weight: 700;
 }
+#nome {
+    font-weight: 700;
+}
+.container-infos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 0.8rem;
+}
 
 label + :checked{
     accent-color: rgb(23, 201, 23);

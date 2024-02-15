@@ -1,35 +1,74 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@font-face {
+  font-family: "Phage Regular";
+  src: url("../assets/fonts/Phage\ Regular.otf");
+}
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-body { 
-    margin: 0;
-    padding: 0;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Work Sans", sans-serif;
+}
+.logotipo {
+  font-family: "Phage Regular";
+  color: white;
+  font-size: 1.5rem;
 }
 
-button {
-    width: 20%;
-    text-align: center;
-    padding: 5px;
-    border: none; 
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: #008CCC;
-    color: white;
-  }
-  
-  .final{
-    display: none;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .final .botao-jogar-novamente button {
-    text-align: center;
-  }
+.navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+  padding: 0.5rem 1.2rem;
+}
 
-  img{
-    width: 300px;
-  }
+.inicio {
+  display: flex;
+  flex-direction: column;
+  height: 65vh;
+  align-items: center;
+  gap: 1.8rem;
+  justify-content: center;
+  background-color: #2A165B;
+}
+.inicio-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5rem;
+ 
+  width: 100%;
+}
+.inicio-info img {
+  max-width: 22rem;
+}
+.inicio-info h2 {
+  width: 20rem;
+  font-size: 2.4rem;
+  font-weight: 700px;
+  text-align: center;
+  color: white;
+}
+.inicio-info > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding-top: 1rem;;
+}
+.jogar-botao {
+  text-decoration: none;
+  color: white;
+  background-color: #6849FE;
+  width: 100%;
+  padding: 1rem 2.2rem;
+  font-size: larger;
+  text-align: center;
+  font-weight: 700;
+  border-radius: 20px;
+}

@@ -13,7 +13,7 @@ export default [
         ],
     },
     {
-        imagem: './assets/quiz-img/galaxy_background2.jpg',
+        imagem: '/assets/quiz-img/galaxy_background2.jpg',
         questao: 'O sol é considerado um...',
         alternativas: [
         { alternativa: "Uma estrela de plasma", certo: true},
@@ -23,7 +23,7 @@ export default [
         ],
   },
   {
-        imagem: './assets/quiz-img/galaxy_background3.jpg',
+        imagem: '/assets/quiz-img/galaxy_background3.jpg',
         questao: 'Quantos planetas existem no nosso sistema solar?',
         alternativas: [
         { alternativa: "7", certo: false },
@@ -33,7 +33,7 @@ export default [
         ],
   },
   {
-      imagem: './assets/quiz-img/galaxy_background4.jpg',
+      imagem: '/assets/quiz-img/galaxy_background4.jpg',
         questao: 'Qual é o menor planeta do sistema solar?',
         alternativas: [
         { alternativa: "Plutão", certo: false },

@@ -41,5 +41,35 @@ export default [
         { alternativa: "Mercúrio", certo: true },
         { alternativa: "Júpiter", certo: false }
         ],
+  },
+  {
+    imagem: '/assets/quiz-img/galaxy_background5.jpg',
+        questao: 'Qual estrela é conhecida como a mais brilhante vista do Planeta Terra?',
+        alternativas: [
+        { alternativa: "Bellatrix", certo: false },
+        { alternativa: "Alnitak", certo: false  },
+        { alternativa: "Sirius", certo: true },
+        { alternativa: "Betelgeuse", certo: false }
+        ],
+  },
+  {
+    imagem: '/assets/quiz-img/galaxy_background6.jpg',
+        questao: 'Qual a galáxia mais próxima da nossa galáxia Via Láctea?',
+        alternativas: [
+        { alternativa: "Galáxia de Andrômeda (NGC 224)", certo: true },
+        { alternativa: "Galáxia de Pinwell (NGC 5457)", certo: false  },
+        { alternativa: "Galáxia do Sombrero (NGC 4594)", certo: false },
+        { alternativa: "Galáxia do Triângulo (NGC 598)", certo: false }
+        ],
+  },
+  {
+    imagem: '/assets/quiz-img/galaxy_background7.jpg',
+        questao: 'Qual a maior Lua do planeta Júpiter?',
+        alternativas: [
+        { alternativa: "Calisto", certo: false },
+        { alternativa: "Lo", certo: false  },
+        { alternativa: "Europa", certo: false },
+        { alternativa: "Ganimedes", certo: true }
+        ],
   }
 ]

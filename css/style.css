@@ -28,10 +28,20 @@ body {
   padding: 0.5rem 1.2rem;
 }
 
+.navbar > div {
+  display:flex ;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  img{border-radius: 100%;
+  cursor: pointer;}
+  
+}
+
 .inicio {
   display: flex;
   flex-direction: column;
-  height: 65vh;
+  height: 100vh;
   align-items: center;
   gap: 1.8rem;
   justify-content: center;
@@ -71,4 +81,10 @@ body {
   text-align: center;
   font-weight: 700;
   border-radius: 20px;
+}
+
+#nomeUsuario{
+  color: white;
+  font-weight: 700;
+cursor: pointer;
 }

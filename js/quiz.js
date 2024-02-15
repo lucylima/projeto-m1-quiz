@@ -45,7 +45,7 @@ function validarResposta(resposta) {
 
 function mostrarResultado(score) {
     const numeroAcertos = document.getElementById('resultado');
-    numeroAcertos.textContent = `Você acertou ${score} de ${questoes.length} perguntas.`;
+    numeroAcertos.textContent = `Parabéns! Você acertou todas as perguntas.`;
     content.style.display = "none";
     contentFinish.style.display = "block";
 }

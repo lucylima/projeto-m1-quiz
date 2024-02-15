@@ -1,5 +1,6 @@
 let score = 0;
 let fase = 0;
+let nome = localStorage.getItem('nome');
 let questaoElemento = document.getElementById('texto-questao');
 let alternativasElemento = document.querySelectorAll('.alternativa');
 let imagemElemento = document.getElementById('imagem-questao');
@@ -8,11 +9,13 @@ let questaoAtual = document.getElementById('n-questao');
 let content = document.querySelector('.container-quiz');
 let contentFinish = document.querySelector('.respostas');
 let submitRespostaBtn = document.getElementById('submit-resposta');
+let nomeElemento = document.getElementById('nome');
 
 import questoes from "./bancoPerguntas.js";
  
 function mostrarPerguntas() {
     questaoAtual.textContent = `Questão ${fase + 1}/${questoes.length}`;
+    nomeElemento.textContent = nome;
     const item = questoes[fase];
     questaoElemento.textContent = item.questao;
     imagemElemento.style.backgroundImage = `url(${item.imagem})`;

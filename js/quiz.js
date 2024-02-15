@@ -39,6 +39,7 @@ function validarResposta(resposta) {
             mostrarResultado();
         }
         } else {
+            alert('Você errou!');
             fase = 0;
             mostrarPerguntas();
         }

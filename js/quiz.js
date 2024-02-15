@@ -10,10 +10,12 @@ let content = document.querySelector('.container-quiz');
 let contentFinish = document.querySelector('.respostas');
 let submitRespostaBtn = document.getElementById('submit-resposta');
 let nomeElemento = document.getElementById('nome');
-
+let resultado = document.querySelector('.container-resultado');
 import questoes from "./bancoPerguntas.js";
  
+
 function mostrarPerguntas() {
+    resultado.style.display = 'none';
     questaoAtual.textContent = `Questão ${fase + 1}/${questoes.length}`;
     nomeElemento.textContent = nome;
     const item = questoes[fase];
@@ -24,7 +26,6 @@ function mostrarPerguntas() {
         element.children[1].textContent = item.alternativas[index].alternativa;
     });
     submitRespostaBtn.disabled = false;
-    jogarNovamente.classList.add('none');
 }
 
 function validarResposta(resposta) {
@@ -35,7 +36,7 @@ function validarResposta(resposta) {
             fase++;
             mostrarPerguntas();
         } else {
-            mostrarResultado(score);
+            mostrarResultado();
         }
         } else {
             fase = 0;
@@ -43,18 +44,17 @@ function validarResposta(resposta) {
         }
 }
 
-function mostrarResultado(score) {
-    const numeroAcertos = document.getElementById('resultado');
-    numeroAcertos.textContent = `Parabéns! Você acertou todas as perguntas.`;
-    content.style.display = "none";
-    contentFinish.style.display = "block";
+function mostrarResultado() {
+    const acertos = document.getElementById('resultado');
+    resultado.style.display = 'flex';
+    content.style.display = 'none';
+    acertos.textContent = `Parabéns! Você acertou todas as perguntas.`;
 }
 
 jogarNovamente.onclick = () => {
-    content.style.display = "flex";
-    contentFinish.style.display = "none";
     fase = 0;
     score = 0;
+    content.style.display = 'flex';
     mostrarPerguntas();
 };
 

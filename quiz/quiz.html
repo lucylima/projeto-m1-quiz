@@ -1,50 +1,55 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/quiz/quiz-javascript.css">
-    <link rel="stylesheet" href="../css/quiz/midia.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/quiz/quiz-javascript.css" />
+    <link rel="stylesheet" href="../css/quiz/midia.css" />
+    <link
+      rel="shortcut icon"
+      href="../assets/favicon.ico"
+      type="image/x-icon"
+    />
     <title>Quiz JavaScript</title>
-</head>
-<body>
+  </head>
+  <body>
     <main id="container">
-        <div class="container-quiz">
-            <div class="container-infos">
-                 <span id="n-questao">Pergunta 0/0</span>
-                 <span id="nome"></span>
-            </div>
-            <div id="container-questao"> 
-                <div id="imagem-questao">
-                <p id="texto-questao"></p>
-            </div>
-                <div class="respostas">
-                    <label class="alternativa">
-                        <input type="radio" name="resposta">
-                        <span id="texto-alternativa"></span>
-                    </label>
-                    <label class="alternativa">
-                        <input type="radio" name="resposta">
-                        <span id="texto-alternativa"></span>
-                    </label>
-                    <label class="alternativa">
-                        <input type="radio" name="resposta">
-                        <span id="texto-alternativa"></span>
-                    </label>
-                    <label class="alternativa">
-                        <input type="radio" name="resposta">
-                        <span id="texto-alternativa"></span>
-                    </label>
-                </div>
-                <button id="submit-resposta">Próximo</button>
-            </div>
+      <div class="container-quiz">
+        <div class="container-infos">
+          <span id="n-questao">Pergunta 0/0</span>
+          <a id="nome" href="../index.html"></a>
         </div>
-        <div class="container-resultado">
-            <span id="resultado"></span>
-            <button class="final botao-jogar-novamente">Jogar Novamente</button>
+        <div id="container-questao">
+          <div id="imagem-questao">
+            <p id="texto-questao"></p>
+          </div>
+          <div class="respostas">
+            <label class="alternativa">
+              <input type="radio" name="resposta" />
+              <span id="texto-alternativa"></span>
+            </label>
+            <label class="alternativa">
+              <input type="radio" name="resposta" />
+              <span id="texto-alternativa"></span>
+            </label>
+            <label class="alternativa">
+              <input type="radio" name="resposta" />
+              <span id="texto-alternativa"></span>
+            </label>
+            <label class="alternativa">
+              <input type="radio" name="resposta" />
+              <span id="texto-alternativa"></span>
+            </label>
+          </div>
+          <button id="submit-resposta">Próximo</button>
         </div>
+      </div>
+      <div class="container-resultado">
+        <span id="resultado"></span>
+        <button class="final botao-jogar-novamente">Jogar Novamente</button>
+      </div>
     </main>
 
-     <script src="../js/quiz.js" type="module"></script> 
-</body>
+    <script src="../js/quiz.js" type="module"></script>
+  </body>
 </html>

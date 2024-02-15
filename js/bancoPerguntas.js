@@ -3,7 +3,7 @@ export default [
     // * bancoPerguntas é um array
     // * as questoes sao objetos
     {
-        imagem: '/assets/quiz-img/galaxy_background1.jpg',
+        imagem: '../assets/quiz-img/galaxy_background1.jpg',
         questao: 'Qual a verdadeira cor do Sol?',
         alternativas: [
         { alternativa: "Vermelho", certo: false },
@@ -13,7 +13,7 @@ export default [
         ],
     },
     {
-        imagem: '/assets/quiz-img/galaxy_background2.jpg',
+        imagem: '../assets/quiz-img/galaxy_background2.jpg',
         questao: 'O sol é considerado um...',
         alternativas: [
         { alternativa: "Uma estrela de plasma", certo: true},
@@ -23,7 +23,7 @@ export default [
         ],
   },
   {
-        imagem: '/assets/quiz-img/galaxy_background3.jpg',
+        imagem: '../assets/quiz-img/galaxy_background3.jpg',
         questao: 'Quantos planetas existem no nosso sistema solar?',
         alternativas: [
         { alternativa: "7", certo: false },
@@ -33,7 +33,7 @@ export default [
         ],
   },
   {
-      imagem: '/assets/quiz-img/galaxy_background4.jpg',
+        imagem: '../assets/quiz-img/galaxy_background4.jpg',
         questao: 'Qual é o menor planeta do sistema solar?',
         alternativas: [
         { alternativa: "Plutão", certo: false },
@@ -43,7 +43,7 @@ export default [
         ],
   },
   {
-    imagem: '/assets/quiz-img/galaxy_background5.jpg',
+        imagem: '../assets/quiz-img/galaxy_background5.jpg',
         questao: 'Qual estrela é conhecida como a mais brilhante vista do Planeta Terra?',
         alternativas: [
         { alternativa: "Bellatrix", certo: false },
@@ -53,7 +53,7 @@ export default [
         ],
   },
   {
-    imagem: '/assets/quiz-img/galaxy_background6.jpg',
+        imagem: '../assets/quiz-img/galaxy_background6.jpg',
         questao: 'Qual a galáxia mais próxima da nossa galáxia Via Láctea?',
         alternativas: [
         { alternativa: "Galáxia de Andrômeda (NGC 224)", certo: true },
@@ -63,7 +63,7 @@ export default [
         ],
   },
   {
-    imagem: '/assets/quiz-img/galaxy_background7.jpg',
+        imagem: '../assets/quiz-img/galaxy_background7.jpg',
         questao: 'Qual a maior Lua do planeta Júpiter?',
         alternativas: [
         { alternativa: "Calisto", certo: false },

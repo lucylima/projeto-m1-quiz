@@ -1,5 +1,6 @@
 let score = 0;
 let fase = 0;
+let nome = localStorage.getItem('nome');
 let questaoElemento = document.getElementById('texto-questao');
 let alternativasElemento = document.querySelectorAll('.alternativa');
 let imagemElemento = document.getElementById('imagem-questao');
@@ -8,11 +9,15 @@ let questaoAtual = document.getElementById('n-questao');
 let content = document.querySelector('.container-quiz');
 let contentFinish = document.querySelector('.respostas');
 let submitRespostaBtn = document.getElementById('submit-resposta');
-
+let nomeElemento = document.getElementById('nome');
+let resultado = document.querySelector('.container-resultado');
 import questoes from "./bancoPerguntas.js";
+ 
 
 function mostrarPerguntas() {
+    resultado.style.display = 'none';
     questaoAtual.textContent = `Questão ${fase + 1}/${questoes.length}`;
+    nomeElemento.textContent = nome;
     const item = questoes[fase];
     questaoElemento.textContent = item.questao;
     imagemElemento.style.backgroundImage = `url(${item.imagem})`;
@@ -21,38 +26,41 @@ function mostrarPerguntas() {
         element.children[1].textContent = item.alternativas[index].alternativa;
     });
     submitRespostaBtn.disabled = false;
-    jogarNovamente.classList.add('none');
 }
 
 function validarResposta(resposta) {
     let respostaCorreta = questoes[fase].alternativas.find(alternativa => alternativa.certo === true).alternativa;
-    if (resposta === respostaCorreta) {
+    if (resposta === respostaCorreta){
         score++;
-    }
-    if (fase < questoes.length - 1) {
-        fase++;
-        mostrarPerguntas();
-    } else {
-        mostrarResultado(score);
-    }
+        if (fase < questoes.length - 1) {
+            fase++;
+            mostrarPerguntas();
+        } else {
+            mostrarResultado();
+        }
+        } else {
+            alert('Você errou!');
+            fase = 0;
+            mostrarPerguntas();
+        }
 }
 
-function mostrarResultado(score) {
-    const numeroAcertos = document.getElementById('resultado');
-    numeroAcertos.textContent = `Você acertou ${score} de ${questoes.length} perguntas.`;
-    content.style.display = "none";
-    contentFinish.style.display = "block";
+function mostrarResultado() {
+    const acertos = document.getElementById('resultado');
+    resultado.style.display = 'flex';
+    content.style.display = 'none';
+    acertos.textContent = `Parabéns! Você acertou todas as perguntas.`;
 }
 
 jogarNovamente.onclick = () => {
-    content.style.display = "flex";
-    contentFinish.style.display = "none";
     fase = 0;
     score = 0;
+    content.style.display = 'flex';
     mostrarPerguntas();
 };
 
 submitRespostaBtn.addEventListener('click', () => {
+    console.log('funcionando');
     let respostaSelecionada = document.querySelector('input[name="resposta"]:checked');
     if (respostaSelecionada) {
         validarResposta(respostaSelecionada.nextElementSibling.textContent);

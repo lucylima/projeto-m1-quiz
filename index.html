@@ -1,14 +1,39 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media.css" />
     <title>Quiz!</title>
-</head>
-<body>
-
-
-    
-</body>
+  </head>
+  <body>
+    <main class="container">
+      <nav class="navbar">
+        <p class="logotipo">Squad 6</p>
+        <div>
+          <p id="nomeUsuario" onclick="solicitarInformacao()" >Usuario</p>
+          <img
+            src="http://placekitten.com/40/40"
+            alt="gatinho"
+            onclick="solicitarInformacao()"
+          />
+        </div>
+      </nav>
+      <section class="inicio" id="inicio">
+        <div class="inicio-info">
+          <div>
+            <h2>Quiz de astronomia feito com HTML, CSS e JavaScript</h2>
+            <a class="jogar-botao" href="quiz/quiz.html">Jogar</a>
+          </div>
+          <img
+            src="./assets/pagina_inicial/cat_astronaut_animated.svg"
+            alt="printscreen do quiz"
+          />
+        </div>
+      </section>
+    </main>
+    <script src="js/script.js" defer></script>
+  </body>
 </html>

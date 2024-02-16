@@ -9,7 +9,7 @@ body {
   padding: 0;
   margin: 0;
   height: 100vh;
-  background-color:  #2A165B;
+  background-color: #2a165b;
 }
 
 #container {
@@ -52,16 +52,15 @@ body {
   margin-bottom: 1.8rem;
   margin-top: 1rem;
   border-radius: 20px;
-  #texto-questao {
-    transition: 2s;
-    color: white;
-    font-size: 1.2rem;
-    font-weight: bolder;
-    text-shadow: 0 0 10px #000000;
-    text-align: center;
-  }
 }
-
+#texto-questao {
+  transition: 2s;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  text-shadow: 0 0 10px #000000;
+  text-align: center;
+}
 
 .respostas {
   display: flex;
@@ -95,7 +94,6 @@ body {
   justify-content: space-between;
   padding-inline: 0.8rem;
 }
-
 
 #submit-resposta {
   background-color: rgb(24, 27, 27);
@@ -132,14 +130,13 @@ body {
   height: 50vh;
   width: 60%;
   padding: 1rem;
-
-  #resultado {
-    font-size: 1.8rem;
-    color: black;
-    font-weight: 700;
-    width: 50%;
-    text-align: center;
-  }
+}
+#resultado {
+  font-size: 1.8rem;
+  color: black;
+  font-weight: 700;
+  width: 50%;
+  text-align: center;
 }
 
 .final.botao-jogar-novamente {
